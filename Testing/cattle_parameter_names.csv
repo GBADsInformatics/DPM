@@ -1,0 +1,96 @@
+# setup
+species
+nruns
+Num_months
+# Initial population
+N_NF_t0
+N_NM_t0
+N_JF_t0
+N_JM_t0
+N_AF_t0
+N_AM_t0
+N_O_t0
+# Growth rate
+Beta_N
+Beta_J
+# Fertility
+part
+prolif
+# Lactation
+prop_F_milked
+lac_duration
+avg_daily_yield_ltr
+milk_value_ltr
+# Draught power
+castration_rate
+draught_rate
+draught_day_value
+# Offtake
+GammaNF
+GammaNM
+GammaJF
+GammaJM
+GammaAF
+GammaAM
+GammaO
+# Mortality
+AlphaN
+AlphaJ
+AlphaF
+AlphaM
+AlphaO
+# Culls
+CullF
+CullM
+CullO
+# Liveweight conversion
+lwNF
+lwNM
+lwJF
+lwJM
+lwAF
+lwAM
+lwO
+# Carcase yield
+ccy
+# Financial value of live animals
+fvNF
+fvJF
+fvAF
+fvNM
+fvJM
+fvAM
+fvO
+# Skins/hides
+hides_rate
+hides_rate_mor
+hides_value
+# Manure rate
+Man_N
+Man_J
+Man_A
+Man_value
+# Dry matter requirements
+DM_req_prpn_NF
+DM_req_prpn_NM
+DM_req_prpn_JF
+DM_req_prpn_JM
+DM_req_prpn_AF
+DM_req_prpn_AM
+DM_req_prpn_O
+# Feed
+prpn_lskeepers_purch_feed
+prpn_feed_paid_for
+Feed_cost_kg
+DM_in_feed
+# Labour cost
+Labour_cattle
+lab_non_health
+Labour_Oxen
+Labour_dairy
+# Health care costs
+Health_exp_prev
+Health_exp_treatment
+# Capital costs
+Interest_rate
+Infrastructure_per_head
