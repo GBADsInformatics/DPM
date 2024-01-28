@@ -21,120 +21,120 @@ Beta_J: 0.04
 
 ### Fertility ###
 
-part: 
-prolif: 
+part: 0.87
+prolif: rtruncnorm(10000, 0, 1.1, 1, 0.0015)
 
 ### Lactation ###
 
-prop_F_milked: 
-lac_duration: 
-avg_daily_yield_ltr: 
-milk_value_ltr: 
+prop_F_milked: 1
+lac_duration: rpert(10000, 200, 380, 290)
+avg_daily_yield_ltr: rpert(10000, 8.3, 18, 11.7)
+milk_value_ltr: 31
 
 ### Draught power ###
 
-castration_rate: 
-draught_rate: 
-draught_day_value: 
+castration_rate: 0
+draught_rate: 0
+draught_day_value: 0 
 
 ### Offtake ###
 
-GammaNF: 
-GammaNM: 
-GammaJF: 
-GammaJM: 
-GammaAF: 
-GammaAM: 
-GammaO: 
+GammaNF: 0.009166667
+GammaNM: 0.05916667
+GammaJF: 0.02166667
+GammaJM: 0
+GammaAF: 0.02333333
+GammaAM: 0.004166667 
+GammaO: 0
 
 ### Mortality ###
 
-AlphaN: 
-AlphaJ: 
-AlphaF: 
-AlphaM: 
-AlphaO: 
+AlphaN: rpert(10000, 0.07/12, 0.07/12, 0.07/12)
+AlphaJ: rpert(10000, 0.01/12, 0.01/12, 0.01/12)
+AlphaF: 0.0025
+AlphaM: 0.0025
+AlphaO: 0.00
 
 ### Culls ###
 
-CullF: 
-CullM: 
-CullO: 
+CullF: 0.009259259
+CullM: 0.009259259
+CullO: 0
 
 ### Liveweight conversion (kg) ###
 
-lwNF: 
-lwNM: 
-lwJF: 
-lwJM: 
-lwAF: 
-lwAM: 
-lwO: 
+lwNF: 147
+lwNM: 147
+lwJF: 375
+lwJM: 375
+lwAF: 550
+lwAM: 550
+lwO: 0
 
 ### Carcass yield ###
 
-ccy: 
+ccy: 0.5
 
 ### Financial value of live animals ###
 
-fvNF: 
-fvJF: 
-fvAF: 
-fvNM: 
-fvJM: 
-fvAM: 
-fvO: 
+fvNF: rpert(10000, 11116, 11116, 11116)
+fvJF: rpert(10000, 16938, 16938, 16938)
+fvAF: rpert(10000,  23396,  23396,  23396)
+fvNM: rpert(10000, 9581, 9581, 9581)
+fvJM: rpert(10000, 20644, 20644, 20644)
+fvAM: rpert(10000, 38324,  38324, 38324)
+fvO: 0
 
 ### Skin/hides ###
 
-hides_rate: 
-hides_rate_mor: 
-hides_value: 
+hides_rate: 1
+hides_rate_mor: 0
+hides_value: rpert(10000, (2.19*12.5), (9*12.5), (5.4*12.5))
 
 ### Manure rates (kg produces/animal/day) ###
 
-Man_N: 
-Man_J: 
-Man_A: 
-Man_value: 
+Man_N: rpert(10000, 0.5, 0.8, 0.65)
+Man_J: rpert(10000, 0.8,  1.5, 1.15)
+Man_A: rpert(10000,  1.5,2.3, 1.9)
+Man_value: 0.5
 
 ### Dry matter requirements as proportion of liveweight ###
 
-DM_req_prpn_NF: 
-DM_req_prpn_NM: 
-DM_req_prpn_JF: 
-DM_req_prpn_JM: 
-DM_req_prpn_AF: 
-DM_req_prpn_AM: 
-DM_req_prpn_O: 
+DM_req_prpn_NF: 0.026
+DM_req_prpn_NM: 0.026
+DM_req_prpn_JF: 0.026
+DM_req_prpn_JM: 0.026
+DM_req_prpn_AF: 0.026
+DM_req_prpn_AM: 0.026
+DM_req_prpn_O: 0.026
 
 ### Proportion of livestock keepers that spend any money on feed ###
 
-prpn_lskeepers_purch_feed: 
+prpn_lskeepers_purch_feed: 1
 
 ### For those spending any money on feed, the proportion of feed that is purchased ###
 
-prpn_feed_paid_for: 
+prpn_feed_paid_for: 0.5
 
-Feed_cost_kg: 
+Feed_cost_kg: rpert(10000, 2.5, 6.5, 3.46)
 
 ### amount of dry matter in wheat and barley and tef in Ethiopia ###
 
-DM_in_feed: 
+DM_in_feed: rpert(10000, 0.85, 0.95, 0.9)
 
 ### Labour costs ###
 
-Labour_cattle: 
-lab_non_health: 
-Labour_Oxen: 
-Labour_dairy: 
+Labour_cattle: rpert(10000, (260/12), (649/12), (368/12))
+lab_non_health: 1
+Labour_Oxen: 0
+Labour_dairy: rpert(10000, (260/12), (649/12), (368/12))
 
 ### Healthcare costs ###
 
-Health_exp_prev: 
-Health_exp_treatment: 
+Health_exp_prev: runif(10000, (57/12), (57/12))
+Health_exp_treatment: runif(10000, (58/12), (58/12))
 
 ### Capital costs ###
 
-Interest_rate: 
-Infrastructure_per_head: 
+Interest_rate: 0
+Infrastructure_per_head: 1

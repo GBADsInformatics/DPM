@@ -41,18 +41,18 @@ draught_day_value: 0
 
 GammaNF: 0
 GammaNM: 0
-GammaJF: 0.025/12
-GammaJM: 0.02/12
-GammaAF: 0.048/12
-GammaAM: 0.27/12
+GammaJF: 0.00208333
+GammaJM: 0.001666667
+GammaAF: 0.004
+GammaAM: 0.0225000
 GammaO: 0
 
 ### Mortality ###
 
 AlphaN: rpert(10000, 0.11/12, 0.15/12, 0.13/12)
 AlphaJ: rpert(10000, 0.1/12, 0.11/12, 0.105/12)
-AlphaF: 0.09/12
-AlphaM: 0.11/12
+AlphaF: 0.0075
+AlphaM: 0.009166667
 AlphaO: 0.00
 
 ### Culls ###
