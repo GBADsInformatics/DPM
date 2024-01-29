@@ -1,6 +1,6 @@
 ##### cattle_trial_past_mortality_zero #####
 
-Species: cattle
+species: cattle
 nruns: 10000
 
 # for now ideal scenarios are just made up

@@ -1,6 +1,6 @@
 ##### cattle_trial_periurban_dairy_mortality_zero_AF #####
 
-Species: cattle
+species: cattle
 nruns: 10000
 
 # for now ideal scenarios are just made up

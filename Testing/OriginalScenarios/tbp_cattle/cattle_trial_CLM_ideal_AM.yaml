@@ -1,6 +1,6 @@
 ##### cattle_trial_CLM_ideal_AM #####
 
-Species: cattle
+species: cattle
 nruns: 10000
 
 # for now ideal scenarios are just made up
