@@ -1,0 +1,124 @@
+##### CLM_G_Ideal #####
+
+species: smallruminants
+nruns: 10000
+
+Num_months: 12
+# Initial population
+N_NF_t0: 2803178
+N_NM_t0: 2586971
+N_JF_t0: 1508363
+N_JM_t0: 1146066
+N_AF_t0: 10864998
+N_AM_t0: 3055888
+
+## Growth rate N -> J and J-> A
+Beta: 0.17
+
+# Fertility
+part: rpert(10000, 0.25, 1.2, 0.85)
+prolif: rpert(10000, 1, 2.1, 1.8)
+
+# lactation
+prop_F_milked: 0.6
+lac_duration: 129
+avg_daily_yield_ltr: 0.53
+milk_value_ltr: 40
+
+# Offtake
+## Currently fixed, but, should this be dependant on new pop size, to keep pop size as it was at t0
+## offtake must = offtake + dif between NNFt0 etc and NJF current
+GammaF : 0.0075
+GammaM : 0.059166666666666666
+
+# Mortality ## informed from META analysis
+AlphaN: 0
+AlphaJ: 0
+AlphaF: 0
+AlphaM: 0
+
+# Culls
+CullF: 0.009259259259259259
+CullM: 0.020833333333333332
+
+## Production parameters (kg)
+
+# Liveweight conversion (kg) ## Informed from META analysis
+lwNF  : rpert(10000, 6, 20, 11.8 )
+lwNM  : rpert(10000, 6.5, 21.5, 12.5)
+lwJF : rpert(10000, 10, 30, 21.0)
+lwJM : rpert(10000, 13, 33, 22.33) 
+lwAF : rpert(10000, 16, 35, 28.2 )
+lwAM : rpert(10000, 18, 37, 30.7)
+
+# carcase yeild
+ccy : 0.42
+
+## Financial value of live animals
+# Ethiopian Birr
+fvNF : rpert(10000, 1124, 2221, 1527)
+fvJF : rpert(10000, 2092, 3332, 2756)
+fvAF: rpert(10000, 2038, 5018, 3333)
+fvNM: rpert(10000, 1191, 2519, 1862)
+fvJM: rpert(10000, 2222, 6503, 4032)
+fvAM: rpert(10000, 3112, 7634,  5293)
+
+## Off take which go for fertility in females (used when calculating hide numbers)
+#fert_offtake
+
+## skin/hides  
+## parameters can be updated through expert opinion but adding options for flexibility here
+hides_rate: 1
+hides_rate_mor: 0.5
+
+# 1 usd per piece = 51 eth birr
+hides_value: 20
+
+# manure rate (kg produced/animal/day)
+Man_N: rnorm(10000, 0.1, 0.016) 
+Man_J: rnorm(10000, 0.2, 0.01)
+Man_A: rnorm(10000, 0.3, 0.002)
+
+# 0.0125 USD / kg = 0.65 eth birr per kg 2021 price
+Man_value: 0.5
+  : nan
+## dry matter requirements as proportion of liveweight
+DM_req_prpn_NF: 0.026
+DM_req_prpn_NM: 0.026
+DM_req_prpn_JF: 0.026
+DM_req_prpn_JM: 0.026
+DM_req_prpn_AF: 0.026
+DM_req_prpn_AM: 0.026
+
+## Proportion of livestock keepers that spend any money on feed
+## NOTE Currently the same for all age*sex groups
+prpn_lskeepers_purch_feed: 0.25
+
+## For those spending any money on feed, the proportion of feed that is purchased
+## NOTE Currently the same for all age*sex groups
+prpn_feed_paid_for: 0.5
+
+## Input parameters ## just example distributions for now
+Feed_cost_kg: rpert(10000, 2.5, 6.5, 3.46)
+
+## variable results for the amount of dry matter in wheat and barley and tef in Ethiopia
+## range 30-90%
+## taking 70% as an estimate for this trial
+DM_in_feed: rpert(10000, 0.85, 0.95, 0.9) 
+
+## Labour cost
+## birr/head/month
+## example code to change labour cost to selecting from distribution
+Lab_SR: rpert(10000, (260/12), (649/12), (368/12))
+lab_non_health: 0.86
+
+## Helath care costs
+## birr/head/month
+## this includes medicines and veterinary care
+## and changing health care costs to select from distribution
+Health_exp: 0
+
+## Capital costs
+## for this we are using bank of Ethiopia inflation rate
+Interest_rate: 0
+Infrastructure_per_head: 1
