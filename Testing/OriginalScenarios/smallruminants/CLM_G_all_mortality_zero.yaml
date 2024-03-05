@@ -2,6 +2,7 @@
 
 species: smallruminants
 nruns: 10000
+seed_value: NULL
 
 Num_months: 12
 # Initial population
