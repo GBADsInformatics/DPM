@@ -2,6 +2,7 @@
 
 species: cattle
 nruns: 10000
+seed_value: NULL
 
 # for now ideal scenarios are just made up
 Num_months: 12
