@@ -17,8 +17,8 @@ N_AF_t0: 1534393.6925075
 N_AM_t0: 240738.37708799998
 
 ## Growth rate N -> J and J-> A
-Beta_N: 0.5
-Beta_J: 0.3333333333333333
+Beta_J: 0.5
+Beta_SubA: 0.3333333333333333
 
 # Fertility
 prop_females_laying: 0.88

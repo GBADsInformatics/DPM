@@ -16,8 +16,8 @@ N_O_t0: 17363582
 
 ### Growth ###
 
-Beta_N: 0.08
-Beta_J: 0.04
+Beta_J: 0.08
+Beta_SubA: 0.04
 
 ### Fertility ###
 
