@@ -12,7 +12,7 @@ N_SubAF_t0: 1357941
 N_SubAM_t0: 756401
 N_AF_t0: 5323753
 N_AM_t0: 2437021
-N_O_t0: 0
+N_Ox_t0: 0
 
 ### Growth ###
 
@@ -45,7 +45,7 @@ GammaSubAF: 0.00208333
 GammaSubAM: 0.001666667
 GammaAF: 0.004
 GammaAM: 0.0225000
-GammaO: 0
+GammaOx: 0
 
 ### Mortality ###
 
@@ -53,13 +53,13 @@ AlphaN: rpert(10000, 0.11/12, 0.15/12, 0.13/12)
 AlphaJ: rpert(10000, 0.1/12, 0.11/12, 0.105/12)
 AlphaF: 0.0075
 AlphaM: 0.009166667
-AlphaO: 0.00
+AlphaOx: 0.00
 
 ### Culls ###
 
 CullF: 0.009259259
 CullM: 0.016666667
-CullO: 0
+CullOx: 0
 
 ### Liveweight conversion (kg) ###
 
@@ -69,7 +69,7 @@ lwSubAF: 180
 lwSubAM: 180
 lwAF: 240
 lwAM: 240
-lwO: 0
+lwOx: 0
 
 ### Carcass yield ###
 
@@ -83,7 +83,7 @@ fvAF: rpert(10000,  18480,  27825,  23337)
 fvJM: rpert(10000, 9345, 17793, 9556)
 fvSubAM: rpert(10000, 17160, 20750, 20592)
 fvAM: rpert(10000, 15840,  49104, 33475)
-fvO: 0
+fvOx: 0
 
 ### Skin/hides ###
 
@@ -106,7 +106,7 @@ DM_req_prpn_SubAF: 0.026
 DM_req_prpn_SubAM: 0.026
 DM_req_prpn_AF: 0.026
 DM_req_prpn_AM: 0.026
-DM_req_prpn_O: 0.026
+DM_req_prpn_Ox: 0.026
 
 ### Proportion of livestock keepers that spend any money on feed ###
 
@@ -126,7 +126,7 @@ DM_in_feed: rpert(10000, 0.85, 0.95, 0.9)
 
 Labour_cattle: rpert(10000, (260/12), (649/12), (368/12))
 lab_non_health: 1
-Labour_Oxen: 0
+Labour_Ox: 0
 Labour_dairy: 0
 
 ### Healthcare costs ###
