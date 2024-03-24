@@ -1,4 +1,4 @@
-##### cattle_trial_past_ideal_JF #####
+##### cattle_trial_past_ideal_SubAF #####
 
 species: cattle
 nruns: 10000
@@ -7,10 +7,10 @@ seed_value: NULL
 # for now ideal scenarios are just made up
 Num_months: 12
 # Initial population
-N_NF_t0: 2125357
-N_NM_t0: 1442971
-N_JF_t0: 1357941
-N_JM_t0: 756401
+N_JF_t0: 2125357
+N_JM_t0: 1442971
+N_SubAF_t0: 1357941
+N_SubAM_t0: 756401
 N_AF_t0: 5323753
 N_AM_t0: 2437021
 N_O_t0: 0
@@ -35,11 +35,11 @@ draught_day_value: 0
 
 # Offtake
 ## Currently fixed, but, should this be dependant on new pop size, to keep pop size as it was at t0
-## offtake must = offtake + dif between NNFt0 etc and NJF current
-GammaNF: 0
-GammaNM: 0
-GammaJF: 0.0020833333333333333
-GammaJM: 0.0016666666666666668
+## offtake must = offtake + dif between NJFt0 etc and NSubAF current
+GammaJF: 0
+GammaJM: 0
+GammaSubAF: 0.0020833333333333333
+GammaSubAM: 0.0016666666666666668
 GammaAF: 0.004
 GammaAM : 0.022500000000000003
 GammaO: 0
@@ -58,10 +58,10 @@ CullO: 0
 ## Production parameters (kg)
 
 # Liveweight conversion (kg) ## Informed from META analysis
-lwNF  : 100
-lwNM  : 100
-lwJF : rpert(10000, 100, 300, 220)
-lwJM : 180
+lwJF  : 100
+lwJM  : 100
+lwSubAF : rpert(10000, 100, 300, 220)
+lwSubAM : 180
 lwAF : 240
 lwAM : 240
 lwO: 0
@@ -71,11 +71,11 @@ ccy : 0.475
 
 ## Financial value of live animals
 # Ethiopian Birr
-fvNF : rpert(10000, 10876, 11616, 11088)
-fvJF : rpert(10000, (13200+(0.3*13200)), (17793+(0.3*17793)), (16896+(0.3*16896)))
+fvJF : rpert(10000, 10876, 11616, 11088)
+fvSubAF : rpert(10000, (13200+(0.3*13200)), (17793+(0.3*17793)), (16896+(0.3*16896)))
 fvAF: rpert(10000,  18480,  27825,  23337)
-fvNM: rpert(10000, 9345, 17793, 9556)
-fvJM: rpert(10000, 17160, 20750, 20592)
+fvJM: rpert(10000, 9345, 17793, 9556)
+fvSubAM: rpert(10000, 17160, 20750, 20592)
 fvAM: rpert(10000, 15840,  49104, 33475)
 fvO: 0
 
@@ -97,10 +97,10 @@ Man_A: rpert(10000,  1.5,2.3, 1.9)
 Man_value: 0.5
 
 ## dry matter requirements as proportion of liveweight
-DM_req_prpn_NF: 0.026
-DM_req_prpn_NM: 0.026
 DM_req_prpn_JF: 0.026
 DM_req_prpn_JM: 0.026
+DM_req_prpn_SubAF: 0.026
+DM_req_prpn_SubAM: 0.026
 DM_req_prpn_AF: 0.026
 DM_req_prpn_AM: 0.026
 DM_req_prpn_O: 0.026

@@ -1,4 +1,4 @@
-##### cattle_trial_CLM_ideal_NM #####
+##### cattle_trial_CLM_ideal_JM #####
 
 species: cattle
 nruns: 10000
@@ -7,10 +7,10 @@ seed_value: NULL
 # for now ideal scenarios are just made up
 Num_months: 12
 # Initial population
-N_NF_t0: 4185804
-N_NM_t0: 4658857
-N_JF_t0: 4472291
-N_JM_t0: 5481069
+N_JF_t0: 4185804
+N_JM_t0: 4658857
+N_SubAF_t0: 4472291
+N_SubAM_t0: 5481069
 N_AF_t0: 16726643
 N_AM_t0: 2159425
 N_O_t0: 17363582
@@ -35,11 +35,11 @@ draught_day_value: 136.7
 
 # Offtake
 ## Currently fixed, but, should this be dependant on new pop size, to keep pop size as it was at t0
-## offtake must = offtake + dif between NNFt0 etc and NJF current
-GammaNF: 0
-GammaNM: 0
-GammaJF: 0.0015416666666666667
+## offtake must = offtake + dif between NJFt0 etc and NSubAF current
+GammaJF: 0
 GammaJM: 0
+GammaSubAF: 0.0015416666666666667
+GammaSubAM: 0
 GammaAF: 0.005883333333333333
 GammaAM : 0.0075
 GammaO: 0.0075
@@ -58,10 +58,10 @@ CullO: 0.016666666666666666
 ## Production parameters (kg)
 
 # Liveweight conversion (kg) ## Informed from META analysis
-lwNF  : rpert(10000, 22, 120, 90)
-lwNM  : rpert(10000, 23, 180, 120)
-lwJF : rpert(10000, 90, 280, 160)
-lwJM : rpert(10000, 100, 320, 170)
+lwJF  : rpert(10000, 22, 120, 90)
+lwJM  : rpert(10000, 23, 180, 120)
+lwSubAF : rpert(10000, 90, 280, 160)
+lwSubAM : rpert(10000, 100, 320, 170)
 lwAF : rpert(10000, 150, 340, 240)
 lwAM : rpert(10000, 170, 400, 255)
 lwO: rpert(10000, 170, 400, 255)
@@ -71,11 +71,11 @@ ccy : 0.5
 
 ## Financial value of live animals
 # Ethiopian Birr
-fvNF : rpert(10000, 10876, 11616, 11088)
-fvJF : rpert(10000, 13200, 17793, 16896)
+fvJF : rpert(10000, 10876, 11616, 11088)
+fvSubAF : rpert(10000, 13200, 17793, 16896)
 fvAF: rpert(10000,  18480,  27825,  23337)
-fvNM: rpert(10000, (9345+934), (17793+1779), (9556+955))
-fvJM: rpert(10000, 17160, 20750, 20592)
+fvJM: rpert(10000, (9345+934), (17793+1779), (9556+955))
+fvSubAM: rpert(10000, 17160, 20750, 20592)
 fvAM: rpert(10000, 15840,  49104, 33475)
 fvO: rpert(10000, 15840,  49104, 33475)
 
@@ -97,10 +97,10 @@ Man_A: rpert(10000,  1.5,2.3, 1.9)
 Man_value: 0.5
 
 ## dry matter requirements as proportion of liveweight
-DM_req_prpn_NF: 0.026
-DM_req_prpn_NM: 0.026
 DM_req_prpn_JF: 0.026
 DM_req_prpn_JM: 0.026
+DM_req_prpn_SubAF: 0.026
+DM_req_prpn_SubAM: 0.026
 DM_req_prpn_AF: 0.026
 DM_req_prpn_AM: 0.026
 DM_req_prpn_O: 0.026

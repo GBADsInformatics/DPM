@@ -6,10 +6,10 @@ seed_value: NULL
 
 Num_months: 12
 # Initial population
-N_NF_t0: 2803178
-N_NM_t0: 2586971
-N_JF_t0: 1508363
-N_JM_t0: 1146066
+N_JF_t0: 2803178
+N_JM_t0: 2586971
+N_SubAF_t0: 1508363
+N_SubAM_t0: 1146066
 N_AF_t0: 10864998
 N_AM_t0: 3055888
 
@@ -28,7 +28,7 @@ milk_value_ltr: 40
 
 # Offtake
 ## Currently fixed, but, should this be dependant on new pop size, to keep pop size as it was at t0
-## offtake must = offtake + dif between NNFt0 etc and NJF current
+## offtake must = offtake + dif between NJFt0 etc and NSubAF current
 GammaF : 0.0075
 GammaM : 0.059166666666666666
 
@@ -45,10 +45,10 @@ CullM: 0.020833333333333332
 ## Production parameters (kg)
 
 # Liveweight conversion (kg) ## Informed from META analysis
-lwNF  : rpert(10000, 6, 20, 11.8 )
-lwNM  : rpert(10000, 6.5, 21.5, 12.5)
-lwJF : rpert(10000, 10, 30, 21.0)
-lwJM : rpert(10000, 13, 33, 22.33) 
+lwJF  : rpert(10000, 6, 20, 11.8 )
+lwJM  : rpert(10000, 6.5, 21.5, 12.5)
+lwSubAF : rpert(10000, 10, 30, 21.0)
+lwSubAM : rpert(10000, 13, 33, 22.33) 
 lwAF : rpert(10000, 16, 35, 28.2 )
 lwAM : rpert(10000, 18, 37, 30.7)
 
@@ -57,11 +57,11 @@ ccy : 0.42
 
 ## Financial value of live animals
 # Ethiopian Birr
-fvNF : rpert(10000, 1124, 2221, 1527)
-fvJF : rpert(10000, 2092, 3332, 2756)
+fvJF : rpert(10000, 1124, 2221, 1527)
+fvSubAF : rpert(10000, 2092, 3332, 2756)
 fvAF: rpert(10000, 2038, 5018, 3333)
-fvNM: rpert(10000, 1191, 2519, 1862)
-fvJM: rpert(10000, 2222, 6503, 4032)
+fvJM: rpert(10000, 1191, 2519, 1862)
+fvSubAM: rpert(10000, 2222, 6503, 4032)
 fvAM: rpert(10000, 3112, 7634,  5293)
 
 ## Off take which go for fertility in females (used when calculating hide numbers)
@@ -84,10 +84,10 @@ Man_A: rnorm(10000, 0.3, 0.002)
 Man_value: 0.5
 
 ## dry matter requirements as proportion of liveweight
-DM_req_prpn_NF: 0.026
-DM_req_prpn_NM: 0.026
 DM_req_prpn_JF: 0.026
 DM_req_prpn_JM: 0.026
+DM_req_prpn_SubAF: 0.026
+DM_req_prpn_SubAM: 0.026
 DM_req_prpn_AF: 0.026
 DM_req_prpn_AM: 0.026
 

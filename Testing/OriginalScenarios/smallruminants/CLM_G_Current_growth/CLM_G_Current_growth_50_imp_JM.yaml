@@ -1,4 +1,4 @@
-##### CLM_G_Current_growth_50_imp_JM #####
+##### CLM_G_Current_growth_50_imp_SubAM #####
 
 species: smallruminants
 nruns: 10000
@@ -6,10 +6,10 @@ seed_value: NULL
 
 Num_months: 12
 # Initial population
-N_NF_t0: 2803178
-N_NM_t0: 2586971
-N_JF_t0: 1508363
-N_JM_t0: 1146066
+N_JF_t0: 2803178
+N_JM_t0: 2586971
+N_SubAF_t0: 1508363
+N_SubAM_t0: 1146066
 N_AF_t0: 10864998
 N_AM_t0: 3055888
 
@@ -28,7 +28,7 @@ milk_value_ltr: 40
 
 # Offtake
 ## Currently fixed, but, should this be dependant on new pop size, to keep pop size as it was at t0
-## offtake must = offtake + dif between NNFt0 etc and NJF current
+## offtake must = offtake + dif between NJFt0 etc and NSubAF current
 GammaF : 0.0075
 GammaM : 0.059166666666666666
 
@@ -45,10 +45,10 @@ CullM: 0.020833333333333332
 ## Production parameters (kg)
 
 # Liveweight conversion (kg) ## Informed from META analysis
-lwNF  : rtruncnorm(10000, a = 1, b = 15, mean = 8.5, sd = 1.6)
-lwNM  : rtruncnorm(10000, a = 1, b = 15, mean = 8.5, sd = 1.6)
-lwJF : rnorm(10000, 13.6, sd = 1.0)
-lwJM : rnorm(10000, (13.6+((33-13.6)*0.5)), sd = 1.0)
+lwJF  : rtruncnorm(10000, a = 1, b = 15, mean = 8.5, sd = 1.6)
+lwJM  : rtruncnorm(10000, a = 1, b = 15, mean = 8.5, sd = 1.6)
+lwSubAF : rnorm(10000, 13.6, sd = 1.0)
+lwSubAM : rnorm(10000, (13.6+((33-13.6)*0.5)), sd = 1.0)
 lwAF : rnorm(10000, 25.1, sd = 0.2) 
 lwAM : rnorm(10000, 24.1, sd = 0.2) 
 
@@ -57,11 +57,11 @@ ccy : 0.42
 
 ## Financial value of live animals
 # Ethiopian Birr
-fvNF : rpert(10000, 810, 1600, 1100)
-fvJF : rpert(10000, 1355, 2158, 1785)
+fvJF : rpert(10000, 810, 1600, 1100)
+fvSubAF : rpert(10000, 1355, 2158, 1785)
 fvAF: rpert(10000, 2140, 4093, 3210)
-fvNM: rpert(10000, 810, 1713, 1266)
-fvJM: rpert(10000, (1355+((2222-1355)*0.5)), (3966+((6503-3966)*0.5)), (2459+((4032-2459)*0.5))) 
+fvJM: rpert(10000, 810, 1713, 1266)
+fvSubAM: rpert(10000, (1355+((2222-1355)*0.5)), (3966+((6503-3966)*0.5)), (2459+((4032-2459)*0.5))) 
 fvAM: rpert(10000, 2443, 5993, 4155)
 
 ## Off take which go for fertility in females (used when calculating hide numbers)
@@ -84,10 +84,10 @@ Man_A: rnorm(10000, 0.3, 0.002)
 Man_value: 0.5
 
 ## dry matter requirements as proportion of liveweight
-DM_req_prpn_NF: 0.026
-DM_req_prpn_NM: 0.026
 DM_req_prpn_JF: 0.026
 DM_req_prpn_JM: 0.026
+DM_req_prpn_SubAF: 0.026
+DM_req_prpn_SubAM: 0.026
 DM_req_prpn_AF: 0.026
 DM_req_prpn_AM: 0.026
 

@@ -9,10 +9,10 @@ Num_months: 12
 # Initial population
 # Village (89%) or small holder (5.5%) chicken
 # breed breakdown
-N_NF_t0: 6500452.537838221
-N_NM_t0: 6500452.537838221
-N_JF_t0: 4494530.786965441
-N_JM_t0: 2271004.11242796
+N_JF_t0: 6500452.537838221
+N_JM_t0: 6500452.537838221
+N_SubAF_t0: 4494530.786965441
+N_SubAM_t0: 2271004.11242796
 N_AF_t0: 15370820.517042901
 N_AM_t0: 4431227.5364448
 
@@ -30,11 +30,11 @@ hatch_rate: 0.82
 egg_price: rpert(10000, 2.97, 5, 4)
 # Offtake
 ## Currently fixed, but, should this be dependant on new pop size, to keep pop size as it was at t0
-## offtake must = offtake + dif between NNFt0 etc and NJF current
-GammaNF: 0
-GammaNM: 0
+## offtake must = offtake + dif between NJFt0 etc and NSubAF current
 GammaJF: 0
 GammaJM: 0
+GammaSubAF: 0
+GammaSubAM: 0
 GammaAF: 0.3964
 GammaAM : 0.6036
 
@@ -50,10 +50,10 @@ CullM: 0.023255813953488372
 ## Production parameters (kg)
 
 # Liveweight conversion (kg) ## Informed from META analysis
-lwNF  : rpert(10000, 0.0271, 0.18, 0.09)
-lwNM  : rpert(10000, 0.0271, 0.18, 0.09)
-lwJF : rpert(10000, 0.59, 0.8, 0.7)
-lwJM : rpert(10000, 0.59, 0.8, 0.7)
+lwJF  : rpert(10000, 0.0271, 0.18, 0.09)
+lwJM  : rpert(10000, 0.0271, 0.18, 0.09)
+lwSubAF : rpert(10000, 0.59, 0.8, 0.7)
+lwSubAM : rpert(10000, 0.59, 0.8, 0.7)
 lwAF : rpert(10000, 1.3, 1.6, 1.45)
 lwAM : rpert(10000, 0.987, 1.75, 1.55)
 
@@ -62,19 +62,19 @@ ccy : 0.69
 
 ## Financial value of live animals
 # Ethiopian Birr
-fvNF : 32
-fvJF : 86.4
+fvJF : 32
+fvSubAF : 86.4
 fvAF: 118.4
-fvNM: 32
-fvJM: 86.4
+fvJM: 32
+fvSubAM: 86.4
 fvAM: 150.4
 
 
 ## total feed intake  requirements per month for growers
-feed_req_prpn_NF: 1.1758333333333333
-feed_req_prpn_NM: 1.1758333333333333
-feed_req_prpn_JF: 2.4168333333333334
-feed_req_prpn_JM: 2.3516666666666666
+feed_req_prpn_JF: 1.1758333333333333
+feed_req_prpn_JM: 1.1758333333333333
+feed_req_prpn_SubAF: 2.4168333333333334
+feed_req_prpn_SubAM: 2.3516666666666666
 feed_req_prpn_AF: 3
 feed_req_prpn_AM: 3.75
 

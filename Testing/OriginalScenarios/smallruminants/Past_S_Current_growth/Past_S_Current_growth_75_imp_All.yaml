@@ -6,10 +6,10 @@ seed_value: NULL
 
 Num_months: 12
 # Initial population
-N_NF_t0: 1805806
-N_NM_t0: 1212609
-N_JF_t0: 1525444
-N_JM_t0: 967746
+N_JF_t0: 1805806
+N_JM_t0: 1212609
+N_SubAF_t0: 1525444
+N_SubAM_t0: 967746
 N_AF_t0: 9293369
 N_AM_t0: 3390900
 
@@ -28,7 +28,7 @@ milk_value_ltr: 0
 
 # Offtake
 ## Currently fixed, but, should this be dependant on new pop size, to keep pop size as it was at t0
-## offtake must = offtake + dif between NNFt0 etc and NJF current
+## offtake must = offtake + dif between NJFt0 etc and NSubAF current
 GammaF : 0.0016666666666666668
 GammaM : 0.01
 
@@ -45,10 +45,10 @@ CullM: 0.020833333333333332
 ## Production parameters (kg)
 
 # Liveweight conversion (kg) ## Informed from META analysis
-lwNF  : rtruncnorm(10000, (1+((6.5-1)*0.75)), (15+((16.5-15)*0.75)), (11.7+((14-11.7)*0.75)), sd = 2.2)
-lwNM  : rtruncnorm(10000, (1+((7-1)*0.75)), (15+((17-15)*0.75)), (11.7+((13.8-11.7)*0.75)), sd = 2.2)
-lwJF : rnorm(10000, (19.1+((17.4-19.1)*0.75)), sd = 0.48)
-lwJM : rnorm(10000, (19.1+((18-19.1)*0.75)), sd = 0.48)
+lwJF  : rtruncnorm(10000, (1+((6.5-1)*0.75)), (15+((16.5-15)*0.75)), (11.7+((14-11.7)*0.75)), sd = 2.2)
+lwJM  : rtruncnorm(10000, (1+((7-1)*0.75)), (15+((17-15)*0.75)), (11.7+((13.8-11.7)*0.75)), sd = 2.2)
+lwSubAF : rnorm(10000, (19.1+((17.4-19.1)*0.75)), sd = 0.48)
+lwSubAM : rnorm(10000, (19.1+((18-19.1)*0.75)), sd = 0.48)
 lwAF : rnorm(10000, (29.6+((29-29.6)*0.75)), sd = 0.7) 
 lwAM : rnorm(10000, (31.5+((30-31.5)*0.75)), sd = 6.8)
 
@@ -57,11 +57,11 @@ ccy : 0.42
 
 ## Financial value of live animals
 # Ethiopian Birr
-fvNF : rpert(10000, (863+((1033-863)*0.75)), (1350+((1615-1350)*0.75)), (1124+((1615-1124)*0.75)))
-fvJF : rpert(10000, (1591+((1591-1591)*0.75)), (2417+((2417-2417)*0.75)), (1836+((2417-1836)*0.75)))
+fvJF : rpert(10000, (863+((1033-863)*0.75)), (1350+((1615-1350)*0.75)), (1124+((1615-1124)*0.75)))
+fvSubAF : rpert(10000, (1591+((1591-1591)*0.75)), (2417+((2417-2417)*0.75)), (1836+((2417-1836)*0.75)))
 fvAF: rpert(10000, 1663, 2687, (2051+((2687-2051)*0.75)))
-fvNM: rpert(10000, (863+((1018-863)*0.75)), (1350+((1592-1350)*0.75)), (1124+((1592-1124)*0.75)))
-fvJM: rpert(10000, 1366, 2701, (1871+((2701-1871)*0.75)))
+fvJM: rpert(10000, (863+((1018-863)*0.75)), (1350+((1592-1350)*0.75)), (1124+((1592-1124)*0.75)))
+fvSubAM: rpert(10000, 1366, 2701, (1871+((2701-1871)*0.75)))
 fvAM: rpert(10000, 2312, 3796, (2940+((3796-2940)*0.75)))
 
 ## Off take which go for fertility in females (used when calculating hide numbers)
@@ -84,10 +84,10 @@ Man_A: rnorm(10000, 0.3, 0.060)
 Man_value: 0.5
 
 ## dry matter requirements as proportion of liveweight
-DM_req_prpn_NF: 0.026
-DM_req_prpn_NM: 0.026
 DM_req_prpn_JF: 0.026
 DM_req_prpn_JM: 0.026
+DM_req_prpn_SubAF: 0.026
+DM_req_prpn_SubAM: 0.026
 DM_req_prpn_AF: 0.026
 DM_req_prpn_AM: 0.026
 

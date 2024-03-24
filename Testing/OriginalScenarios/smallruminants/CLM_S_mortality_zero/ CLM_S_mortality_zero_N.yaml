@@ -6,10 +6,10 @@ seed_value: NULL
 
 Num_months: 12
 # Initial population
-N_NF_t0: 2070822
-N_NM_t0: 2070822
-N_JF_t0: 1915971
-N_JM_t0: 1147386
+N_JF_t0: 2070822
+N_JM_t0: 2070822
+N_SubAF_t0: 1915971
+N_SubAM_t0: 1147386
 N_AF_t0: 14049629
 N_AM_t0: 3048715
 
@@ -28,7 +28,7 @@ milk_value_ltr: 0
 
 # Offtake
 ## Currently fixed, but, should this be dependant on new pop size, to keep pop size as it was at t0
-## offtake must = offtake + dif between NNFt0 etc and NJF current
+## offtake must = offtake + dif between NJFt0 etc and NSubAF current
 GammaF : 0.0033333333333333335
 GammaM : 0.045000000000000005
 
@@ -45,10 +45,10 @@ CullM: 0.020833333333333332
 ## Production parameters (kg)
 
 # Liveweight conversion (kg) ## Informed from META analysis
-lwNF  : rtruncnorm(10000, a = 1, b = 15, mean = 11.7, sd = 2.2)
-lwNM  : rtruncnorm(10000, a = 1, b = 15, mean =11.7, sd = 2.5)
-lwJF : rnorm(10000, 21.1, sd = 3.8)
-lwJM : rnorm(10000, 21.1, sd = 3.8)
+lwJF  : rtruncnorm(10000, a = 1, b = 15, mean = 11.7, sd = 2.2)
+lwJM  : rtruncnorm(10000, a = 1, b = 15, mean =11.7, sd = 2.5)
+lwSubAF : rnorm(10000, 21.1, sd = 3.8)
+lwSubAM : rnorm(10000, 21.1, sd = 3.8)
 lwAF : rnorm(10000, 28.6, sd = 4.1)
 lwAM :  rnorm(10000, 31.5, sd = 6.8)
 
@@ -57,11 +57,11 @@ ccy : 0.42
 
 ## Financial value of live animals
 # Ethiopian Birr
-fvNF : rpert(10000, 839, 1676, 1385)
-fvJF : rpert(10000, 1246, 4300, 2120)
+fvJF : rpert(10000, 839, 1676, 1385)
+fvSubAF : rpert(10000, 1246, 4300, 2120)
 fvAF: rpert(10000, 2400, 4013, 2890)
-fvNM: rpert(10000, 839, 1676, 1385)
-fvJM: rpert(10000, 1246, 5949, 2541)
+fvJM: rpert(10000, 839, 1676, 1385)
+fvSubAM: rpert(10000, 1246, 5949, 2541)
 fvAM: rpert(10000, 2341, 8413, 4036)
 
 ## Off take which go for fertility in females (used when calculating hide numbers)
@@ -84,10 +84,10 @@ Man_A: 0.3
 Man_value: 0.5
 
 ## dry matter requirements as proportion of liveweight
-DM_req_prpn_NF: 0.026
-DM_req_prpn_NM: 0.026
 DM_req_prpn_JF: 0.026
 DM_req_prpn_JM: 0.026
+DM_req_prpn_SubAF: 0.026
+DM_req_prpn_SubAM: 0.026
 DM_req_prpn_AF: 0.026
 DM_req_prpn_AM: 0.026
 

@@ -6,10 +6,10 @@ Num_months: 12
 
 ### Initial population ###
 
-N_NF_t0: 327592
-N_NM_t0: 93598
-N_JF_t0: 444083
-N_JM_t0: 47866
+N_JF_t0: 327592
+N_JM_t0: 93598
+N_SubAF_t0: 444083
+N_SubAM_t0: 47866
 N_AF_t0: 913813
 N_AM_t0: 39053
 N_O_t0: 0
@@ -39,10 +39,10 @@ draught_day_value: 0
 
 ### Offtake ###
 
-GammaNF: 0.009166667
-GammaNM: 0.05916667
-GammaJF: 0.02166667
-GammaJM: 0
+GammaJF: 0.009166667
+GammaJM: 0.05916667
+GammaSubAF: 0.02166667
+GammaSubAM: 0
 GammaAF: 0.02333333
 GammaAM: 0.004166667 
 GammaO: 0
@@ -63,10 +63,10 @@ CullO: 0
 
 ### Liveweight conversion (kg) ###
 
-lwNF: 147
-lwNM: 147
-lwJF: 375
-lwJM: 375
+lwJF: 147
+lwJM: 147
+lwSubAF: 375
+lwSubAM: 375
 lwAF: 550
 lwAM: 550
 lwO: 0
@@ -77,11 +77,11 @@ ccy: 0.5
 
 ### Financial value of live animals ###
 
-fvNF: rpert(10000, 11116, 11116, 11116)
-fvJF: rpert(10000, 16938, 16938, 16938)
+fvJF: rpert(10000, 11116, 11116, 11116)
+fvSubAF: rpert(10000, 16938, 16938, 16938)
 fvAF: rpert(10000,  23396,  23396,  23396)
-fvNM: rpert(10000, 9581, 9581, 9581)
-fvJM: rpert(10000, 20644, 20644, 20644)
+fvJM: rpert(10000, 9581, 9581, 9581)
+fvSubAM: rpert(10000, 20644, 20644, 20644)
 fvAM: rpert(10000, 38324,  38324, 38324)
 fvO: 0
 
@@ -100,10 +100,10 @@ Man_value: 0.5
 
 ### Dry matter requirements as proportion of liveweight ###
 
-DM_req_prpn_NF: 0.026
-DM_req_prpn_NM: 0.026
 DM_req_prpn_JF: 0.026
 DM_req_prpn_JM: 0.026
+DM_req_prpn_SubAF: 0.026
+DM_req_prpn_SubAM: 0.026
 DM_req_prpn_AF: 0.026
 DM_req_prpn_AM: 0.026
 DM_req_prpn_O: 0.026
