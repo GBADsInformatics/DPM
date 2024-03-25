@@ -76,8 +76,8 @@ hides_rate_mor: 0.5
 hides_value: 20
 
 # manure rate (kg produced/animal/day)
-Man_N: rnorm(10000, 0.1, 0.016) 
-Man_J: rnorm(10000, 0.2, 0.01)
+Man_J: rnorm(10000, 0.1, 0.016) 
+Man_SubA: rnorm(10000, 0.2, 0.01)
 Man_A: rnorm(10000, 0.3, 0.002)
 
 # 0.0125 USD / kg = 0.65 eth birr per kg 2021 price

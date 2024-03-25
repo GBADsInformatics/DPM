@@ -93,8 +93,8 @@ hides_value:
 
 ### Manure rates (kg produces/animal/day) ###
 
-Man_N: 
 Man_J: 
+Man_SubA: 
 Man_A: 
 Man_value: 
 
@@ -126,7 +126,7 @@ DM_in_feed:
 
 Labour_cattle: 
 lab_non_health: 
-Labour_Ox: 
+Labour_Oxen: 
 Labour_dairy: 
 
 ### Healthcare costs ###
