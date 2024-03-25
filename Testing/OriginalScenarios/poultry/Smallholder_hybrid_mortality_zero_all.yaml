@@ -39,8 +39,8 @@ GammaAF: 0.3964
 GammaAM : 0.6036
 
 # Mortality ## informed from META analysis
-AlphaN: 0
 AlphaJ: 0
+AlphaSubA: 0
 AlphaF: 0
 AlphaM: 0
 

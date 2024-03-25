@@ -45,8 +45,8 @@ GammaAM : 0.004166666666666667
 GammaOx: 0.0
 
 # Mortality ## informed from META analysis
-AlphaN: 0
 AlphaJ: 0
+AlphaSubA: 0
 AlphaF: 0
 AlphaM: 0
 AlphaOx: 0

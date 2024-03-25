@@ -33,8 +33,8 @@ GammaF : 0.0075
 GammaM : 0.059166666666666666
 
 # Mortality ## informed from META analysis
-AlphaN: rpert(1000, 0.12/6, 0.39/6, 0.26/6)
-AlphaJ: rpert(1000, 0.14/6, 0.14/6, 0.14/6)
+AlphaJ: rpert(1000, 0.12/6, 0.39/6, 0.26/6)
+AlphaSubA: rpert(1000, 0.14/6, 0.14/6, 0.14/6)
 AlphaF: rpert(1000, 0.04/12, 0.13/12, 0.09/12)
 AlphaM: rpert(1000, 0.05/12, 0.13/12, 0.09/12)
 

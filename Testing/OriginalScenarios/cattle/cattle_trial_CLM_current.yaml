@@ -45,8 +45,8 @@ GammaAM : 0.0075
 GammaOx: 0.0075
 
 # Mortality ## informed from META analysis
-AlphaN: rpert(10000, 0.09/12, 0.26/12, 0.12/12)
-AlphaJ: rpert(10000, 0.06/12, 0.09/12, 0.075/12)
+AlphaJ: rpert(10000, 0.09/12, 0.26/12, 0.12/12)
+AlphaSubA: rpert(10000, 0.06/12, 0.09/12, 0.075/12)
 AlphaF: rpert(10000, 0.02/12, 0.02/12, 0.02/12)
 AlphaM: rpert(10000, 0.01/12, 0.01/12, 0.01/12)
 AlphaOx: rpert(10000, 0.01/12, 0.01/12, 0.01/12)
